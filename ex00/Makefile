@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Malefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: warzz <warzz@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/27 14:00:47 by warzz             #+#    #+#              #
-#    Updated: 2023/11/27 14:37:17 by warzz            ###   ########.fr        #
+#    Updated: 2023/11/30 16:13:53 by warzz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,9 +21,9 @@ NAME	=	megaphone
 
 SOURCES	=	megaphone.cpp
 
-CC		=	clang++
+CC		=	g++
 
-CFLAGS	=	-Werror -Wextra -Wall
+CFLAGS	=	-Werror -Wextra -Wall -std=c++98
 
 RM		=	rm -rf
 
