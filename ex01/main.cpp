@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/27 14:10:06 by warzz             #+#    #+#             */
-/*   Updated: 2023/12/07 17:28:12 by ssalor           ###   ########.fr       */
+/*   Created: 2023/12/07 17:56:50 by ssalor            #+#    #+#             */
+/*   Updated: 2023/12/07 18:18:29 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "main.hpp"
 
-int	main(int ac, char **av)
+int	main()
 {
-	if (ac > 1)
+	PhoneBook phonebook;
+	std::string s = 0;
+
+	while (1)
 	{
-		for (int i = 1; av[i]; i++)
-		{
-			for (int j = 0; av[i][j]; j++)
-				std::cout << (char)toupper(av[i][j]);
-		}
+		std::cout << "Enter command: ";
+		std::cin >> s;
+		if (s == "ADD")
+			add_contact();
+		else if (s == "SEARCH")
+			do_another_thing;
+		else if (s == "EXIT")
+			do_exit;
 	}
-	else
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	std::cout << std::endl;
-	return (1);
 }
