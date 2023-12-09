@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+         #
+#    By: warzz <warzz@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/27 14:00:47 by warzz             #+#    #+#              #
-#    Updated: 2023/12/07 17:36:02 by ssalor           ###   ########.fr        #
+#    Updated: 2023/12/09 21:52:15 by warzz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,11 @@ _END		=	\033[00m
 NAME	=	phonebook
 
 SOURCES	=	PhoneBook.cpp	\
+			PhoneBook.hpp	\
 			Contact.cpp		\
-			main.cpp
+			Contact.hpp		\
+			main.cpp		\
+			main.hpp		\
 
 CC		=	g++
 
