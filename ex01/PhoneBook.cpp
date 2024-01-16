@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: warzz <warzz@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:56:25 by ssalor            #+#    #+#             */
-/*   Updated: 2023/12/09 23:29:41 by warzz            ###   ########.fr       */
+/*   Updated: 2024/01/16 11:10:22 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,5 @@
 
 void	PhoneBook::add_contact()
 {
-	Contact     newContact;
-    std::string input;
 
-    std::cin.ignore();
-    std::cout << std::endl;
-    std::cout << "Enter First Name : ";
-    std::getline(std::cin, input);
-    if (checkInput(input));
-        return ;
-    newContact.setFirstName(trimWhiteSpaces(input));
-    input.clear();
 }

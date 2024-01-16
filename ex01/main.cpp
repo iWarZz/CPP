@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: warzz <warzz@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:56:50 by ssalor            #+#    #+#             */
-/*   Updated: 2023/12/09 23:35:51 by warzz            ###   ########.fr       */
+/*   Updated: 2024/01/16 11:07:23 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	main()
 {
 	PhoneBook phonebook;
 	std::string input = 0;
+	int	i = 0;
 
 	while (1)
 	{
@@ -25,13 +26,17 @@ int	main()
 		std::cout << "EXIT:		Quit the program" << std::endl;
 		std::cout << "Enter command: ";
 		std::cin >> input;
-		if (input == "ADD")
-			phonebook.add_contact();
-		else if (input == "SEARCH")
-			phonebook.do_another_thing();
-		else if (input == "EXIT" || input == "\n")
+		if (input == "EXIT" || input == "\n")
 			return (0);
+		else if (input == "ADD")
+		{
+			phonebook.add_contact();
+		}
+		else if (input == "SEARCH")
+			phonebook.search_contact();
 		else
-		//	pas trouver
+			std::cout << "Valid command : ADD, SEARCH and EXIT" << std::endl;
 	}
 }
+
+

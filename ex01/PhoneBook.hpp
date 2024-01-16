@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: warzz <warzz@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:36:53 by ssalor            #+#    #+#             */
-/*   Updated: 2023/12/09 23:11:37 by warzz            ###   ########.fr       */
+/*   Updated: 2024/01/16 10:56:03 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ class PhoneBook{
 		int 	index;
 	public:
 		PhoneBook();
-		void	add_contact();
+		void	add_contact(int i, std::string f_n, std::string l_n,
+			std::string n_n, std::string p_n, std::string s);
+		void	search_contact();
 };
 
 #endif
