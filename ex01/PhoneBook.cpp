@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:56:25 by ssalor            #+#    #+#             */
-/*   Updated: 2024/01/23 15:14:33 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/01/23 15:19:56 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	PhoneBook::add_contact()
 	{
 		std::cout << "Set phone number:";
 		std::getline(std::cin, input);
-		if (!input.empty() || input.find_first_not_of("0123456789") != std::string::npos)
+		if (input.empty() || input.find_first_not_of("0123456789") != std::string::npos)
 		{
 			std::cin.clear();
 			std::cout << "Phone number incorrect" << std::endl;
