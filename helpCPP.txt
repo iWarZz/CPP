@@ -1,0 +1,23 @@
+
+
+Let's take std::cin.getline() apart. First, there's std::. This is the namespace in which the standard library lives. It has hundreds of types, functions and objects.
+
+std::cin is such an object. It's the standard character input object, defined in <iostream>. It has some methods of its own,
+ but you can also use it with many free functions. Most of these methods and functions are ways to get one or more characters from the standard input.
+
+Finally, .getline() is one such method of std::cin (and other similar objects). You tell it how many characters it should get from the object on its left side (std::cin here),
+ and where to put those characters. The precise number of characters can vary: .getline() will stop in three cases:
+    1. The end of a line is reached 
+    2. There are no characters left in the input (doesn't happen normally on std::cin as you can keep typing) 
+    3. The maximum number of characters is read.
+
+There are other methods and functions that can be used with the std::cin object, e.g.
+
+  std::string s;
+  int i;
+  std::cin >> s; // Read a single word from std::cin
+  std::cin >> i; // Read a single number from std::cin
+  std::getline(std::cin, s); // Read an entire line (up to \n) from std::cin
+  std::cin.ignore(100); // Ignore the next 100 characters of std::cin
+
+

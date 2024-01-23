@@ -6,14 +6,14 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:45:47 by ssalor            #+#    #+#             */
-/*   Updated: 2024/01/16 14:06:30 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/01/23 13:28:24 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-# include "main.hpp"
+# include <string>
 
 class Contact {
 	private:

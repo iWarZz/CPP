@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: warzz <warzz@student.42.fr>                +#+  +:+       +#+         #
+#    By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/27 14:00:47 by warzz             #+#    #+#              #
-#    Updated: 2023/12/09 21:52:15 by warzz            ###   ########.fr        #
+#    Updated: 2024/01/23 13:41:26 by ssalor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,13 +20,10 @@ _END		=	\033[00m
 NAME	=	phonebook
 
 SOURCES	=	PhoneBook.cpp	\
-			PhoneBook.hpp	\
 			Contact.cpp		\
-			Contact.hpp		\
 			main.cpp		\
-			main.hpp		\
 
-CC		=	g++
+CC		=	c++
 
 CFLAGS	=	-Werror -Wextra -Wall -std=c++98
 
@@ -36,7 +33,7 @@ OBJECTS	=	${SOURCES:.cpp=.o}
 
 
 %.o:	%.cpp
-		@$(CC) $(FLAGS) -c $< -o $@
+		@$(CC) $(CFLAGS) -c $< -o $@
 
 all:	$(NAME)
 		@echo ""
