@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:45:47 by ssalor            #+#    #+#             */
-/*   Updated: 2024/01/23 13:28:24 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/01/23 15:25:48 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,11 @@ class Contact {
 		std::string		phone_number;
 		std::string		darkest_secret;
 	public:
-		
+		void	Contact::setFirstName(std::string str);
+		void	Contact::setLastName(std::string str);
+		void	Contact::setNickName(std::string str);
+		void	Contact::setPhoneNumber(std::string str);
+		void	Contact::setDarkestSecret(std::string str);
 };
 
 #endif
