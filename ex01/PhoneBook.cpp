@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:56:25 by ssalor            #+#    #+#             */
-/*   Updated: 2024/01/23 14:54:46 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/01/23 15:13:18 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ PhoneBook::PhoneBook() : count(0) {};
 
 void	PhoneBook::add_contact()
 {
-    //Contact		new_contact;
+    Contact		new_contact;
     std::string input;
 
 	std::cout << "Set first name:";
@@ -48,9 +48,14 @@ void	PhoneBook::add_contact()
 	std::getline(std::cin, input);
 	//new_contact.setDarkestSecret(input);
 
-	
-
-	
+	if (count > 7)
+		this->contacts[count - 1] = new_contact;
+	else
+	{
+		this->count += 1;
+		this->contacts[count - 1] = new_contact;
+	}
+	std::cout << "Contact Added" << std::endl;
 }
 
 //void	PhoneBook::search()
