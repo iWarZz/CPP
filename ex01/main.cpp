@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:56:50 by ssalor            #+#    #+#             */
-/*   Updated: 2024/01/23 14:47:52 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/01/23 15:15:49 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main()
 		std::cout << "EXIT:		Quit the program" << std::endl;
 		std::cout << "Enter command: ";
 		std::getline(std::cin, input);
-		if (input == "EXIT" || input == "\0")
+		if (input == "EXIT")
 			return (0);
 		else if (input == "ADD")
 		{
