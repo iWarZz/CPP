@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:36:53 by ssalor            #+#    #+#             */
-/*   Updated: 2024/01/23 14:44:03 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/01/24 13:56:49 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <iostream>
 # include <sstream>
 # include <string>
+# include <iomanip>
 # include "Contact.hpp"
 
 class PhoneBook{
@@ -24,7 +25,7 @@ class PhoneBook{
 		size_t	count;
 	public:
 		void	add_contact();
-		void	search_contact();
+		void	search();
 		PhoneBook();
 };
 

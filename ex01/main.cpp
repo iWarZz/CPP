@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:56:50 by ssalor            #+#    #+#             */
-/*   Updated: 2024/01/23 15:15:49 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/01/24 13:58:16 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main()
 		else if (input == "SEARCH")
 		{
 			std::cout << "Fait SEARCH" << std::endl;
-			//phonebook.search_contact();
+			pb.search();
 		}
 		else
 			std::cout << "Valid command : ADD, SEARCH and EXIT" << std::endl;

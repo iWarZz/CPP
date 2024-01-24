@@ -6,13 +6,12 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:45:47 by ssalor            #+#    #+#             */
-/*   Updated: 2024/01/23 15:25:48 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/01/24 13:55:42 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
-
 # include <string>
 
 class Contact {
@@ -23,11 +22,16 @@ class Contact {
 		std::string		phone_number;
 		std::string		darkest_secret;
 	public:
-		void	Contact::setFirstName(std::string str);
-		void	Contact::setLastName(std::string str);
-		void	Contact::setNickName(std::string str);
-		void	Contact::setPhoneNumber(std::string str);
-		void	Contact::setDarkestSecret(std::string str);
+		void				setFirstName(std::string str);
+		void				setLastName(std::string str);
+		void				setNickname(std::string str);
+		void				setPhoneNumber(std::string str);
+		void				setDarkestSecret(std::string str);
+		const std::string& getFirstName(void) const;
+		const std::string& getLastName(void) const;
+		const std::string& getNickname(void) const;
+		const std::string& getPhoneNumber(void) const;
+		const std::string& getDarkestSecret(void) const;
 };
 
 #endif
