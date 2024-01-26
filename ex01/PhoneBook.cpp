@@ -3,14 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
+/*   By: warzz <warzz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:56:25 by ssalor            #+#    #+#             */
-/*   Updated: 2024/01/26 13:42:30 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/01/27 00:38:28 by warzz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+
+void display_contact(Contact contact)
+{
+	std::cout << std::endl;
+	std::cout << "First name: " << contact.getFirstName() << std::endl;
+	std::cout << "Last name: " << contact.getLastName() << std::endl;
+	std::cout << "Nickname: " << contact.getNickname() << std::endl;
+	std::cout << "Phone number: " << contact.getPhoneNumber() << std::endl;
+	std::cout << "Darkest secret: " << contact.getDarkestSecret() << std::endl;
+	std::cout << std::endl;
+}
 
 std::string	getFormat(const std::string &field)
 {
@@ -105,4 +116,25 @@ void	PhoneBook::search()
 		std::cout << std::setw(10) << getFormat(contacts[i].getNickname()) << "|";
 		std::cout << std::endl;
 	}
+
+	std::string index;
+	int			conv_index;
+
+	while (1)
+	{
+		std::cout << "Choose index contact (0 to 7)";
+		std::getline(std::cin, index);
+		if (index.empty() || index.find_first_not_of("0123456789") == std::string::npos)
+		{
+			conv_index = atoi(index.c_str());
+			if(conv_index <= 8)
+				break;
+		}
+		std::cin.clear();
+		std::cout << "invalid output" << std::endl;
+	}
+	if ((size_t)conv_index > (count % 8))
+		std::cout << "No contact find in this index" << std::endl << std::endl;
+	else
+		display_contact(this->contacts[conv_index]);
 }
