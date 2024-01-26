@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:36:53 by ssalor            #+#    #+#             */
-/*   Updated: 2024/01/24 13:56:49 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/01/26 13:48:34 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PHONEBOOK_HPP
 
 # include <iostream>
+# include <cstdlib>
 # include <sstream>
 # include <string>
 # include <iomanip>

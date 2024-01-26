@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:56:25 by ssalor            #+#    #+#             */
-/*   Updated: 2024/01/24 14:25:41 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/01/26 13:42:30 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,8 @@ void	PhoneBook::add_contact()
 
 	if (count > 7)
 	{
-		this->contacts[count % 7 - 1] = new_contact;
+		
+		this->contacts[count % 8] = new_contact;
 		this->count += 1;
 	}
 	else
