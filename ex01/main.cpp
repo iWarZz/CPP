@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:56:50 by ssalor            #+#    #+#             */
-/*   Updated: 2024/01/26 14:11:54 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/01/29 10:49:55 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,7 @@ int	main()
 		else if (input == "ADD")
 			pb.add_contact();
 		else if (input == "SEARCH")
-		{
-			std::cout << "Fait SEARCH" << std::endl;
 			pb.search();
-		}
 		else
 			std::cout << "Valid command : ADD, SEARCH and EXIT" << std::endl;
 	}

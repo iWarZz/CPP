@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: warzz <warzz@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:56:25 by ssalor            #+#    #+#             */
-/*   Updated: 2024/01/27 00:38:28 by warzz            ###   ########.fr       */
+/*   Updated: 2024/01/29 11:06:59 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,19 @@ void	PhoneBook::add_contact()
 		break;
 	}
 
-	std::cout << "Set nickname:";
-	std::getline(std::cin, input);
-	new_contact.setNickname(input);
+	while (1)
+	{
+		std::cout << "Set nickname:";
+		std::getline(std::cin, input);
+		if (input.empty() || input.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-0123456789") != std::string::npos)
+		{
+			std::cin.clear();
+			std::cout << "Nickname not valid" << std::endl;
+			continue;
+		}
+		new_contact.setNickname(input);
+		break;
+	}
 
 	while (1)
 	{
@@ -82,9 +92,20 @@ void	PhoneBook::add_contact()
 		new_contact.setPhoneNumber(input);
 		break;
 	}
-	std::cout << "Set darkest secret:";
-	std::getline(std::cin, input);
-	new_contact.setDarkestSecret(input);
+
+	while (1)
+	{
+		std::cout << "Set darkest secret:";
+		std::getline(std::cin, input);
+		if (input.empty() || input.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-0123456789,.") != std::string::npos)
+		{
+			std::cin.clear();
+			std::cout << "Input for Darkest secret not valid" << std::endl;
+			continue;
+		}
+		new_contact.setDarkestSecret(input);
+		break;
+	}
 
 	if (count > 7)
 	{
@@ -127,13 +148,13 @@ void	PhoneBook::search()
 		if (index.empty() || index.find_first_not_of("0123456789") == std::string::npos)
 		{
 			conv_index = atoi(index.c_str());
-			if(conv_index <= 8)
+			if(conv_index <= 7)
 				break;
 		}
 		std::cin.clear();
-		std::cout << "invalid output" << std::endl;
+		std::cout << "invalid intput" << std::endl;
 	}
-	if ((size_t)conv_index > (count % 8))
+	if (static_cast<size_t>(conv_index) > 7)
 		std::cout << "No contact find in this index" << std::endl << std::endl;
 	else
 		display_contact(this->contacts[conv_index]);
