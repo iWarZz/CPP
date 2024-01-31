@@ -6,21 +6,18 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:56:25 by ssalor            #+#    #+#             */
-/*   Updated: 2024/01/29 11:57:24 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/01/31 13:37:01 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-void display_contact(Contact contact)
-{
-	std::cout << std::endl;
-	std::cout << "First name: " << contact.getFirstName() << std::endl;
-	std::cout << "Last name: " << contact.getLastName() << std::endl;
-	std::cout << "Nickname: " << contact.getNickname() << std::endl;
-	std::cout << "Phone number: " << contact.getPhoneNumber() << std::endl;
-	std::cout << "Darkest secret: " << contact.getDarkestSecret() << std::endl;
-	std::cout << std::endl;
+void display_contact(Contact contact)f (input.empty() || input.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-") != std::string::npos)
+	{
+		std::cin.clear();
+		std::cout << "Zombie name not valid" << std::endl;
+		continue;
+	}
 }
 
 std::string	getFormat(const std::string &field)

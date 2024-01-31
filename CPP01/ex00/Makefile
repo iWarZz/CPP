@@ -6,7 +6,7 @@
 #    By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/29 12:31:47 by ssalor            #+#    #+#              #
-#    Updated: 2024/01/29 12:43:30 by ssalor           ###   ########.fr        #
+#    Updated: 2024/01/31 13:17:30 by ssalor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,10 @@ _END		=	\033[00m
 
 NAME	=	brainz
 
-SOURCES	=	
+SOURCES	=	main.cpp \
+			Zombie.cpp\
+			newZombie.cpp\
+			randomChump.cpp
 
 CC		=	c++
 
