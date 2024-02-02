@@ -1,33 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/31 14:23:57 by ssalor            #+#    #+#             */
-/*   Updated: 2024/02/02 10:03:04 by ssalor           ###   ########.fr       */
+/*   Created: 2024/02/02 13:05:33 by ssalor            #+#    #+#             */
+/*   Updated: 2024/02/02 13:05:34 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-
-Zombie::~Zombie(void)
-{
-    std::cout << "Zombie " << this->getName() << " died !" << std::endl;
-}
-
-void    Zombie::setName(std::string name)
-{
-    this->name = name;
-}
-
-const   std::string& Zombie::getName(void) const
-{
-    return (this->name);
-}
-
-void Zombie::annonce(void)
-{
-    std::cout << this->getName() << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}

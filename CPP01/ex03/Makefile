@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/31 13:46:18 by ssalor            #+#    #+#              #
-#    Updated: 2024/02/02 10:10:10 by ssalor           ###   ########.fr        #
+#    Created: 2024/02/02 13:02:53 by ssalor            #+#    #+#              #
+#    Updated: 2024/02/02 13:03:38 by ssalor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,11 +17,9 @@ _BOLD		=	\033[1m
 _END		=	\033[00m
 
 
-NAME	=	brainz
+NAME	=	
 
-SOURCES	=	main.cpp \
-			zombieHorde.cpp\
-			Zombie.cpp
+SOURCES	=	main.cpp\
 
 CC		=	c++
 
