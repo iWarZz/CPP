@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 11:21:58 by ssalor            #+#    #+#             */
-/*   Updated: 2024/02/27 13:53:35 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/02/27 14:14:44 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Fixed
 		Fixed &operator=(const Fixed &original);
 		~Fixed(void);
 
-		int getRawBits(void);
+		int getRawBits(void) const;
 		void setRawBits(int const raw);
 };
 
