@@ -1,15 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/02 13:05:29 by ssalor            #+#    #+#             */
-/*   Updated: 2024/02/13 12:35:01 by ssalor           ###   ########.fr       */
+/*   Created: 2024/02/21 11:22:04 by ssalor            #+#    #+#             */
+/*   Updated: 2024/02/27 11:04:22 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "HumanB.hpp"
+#include "Fixed.hpp"
 
+int main(void)
+{
+	Fixed a;
+	Fixed b( a );
+	Fixed c;
+
+	c = b;
+	
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
+	return 0;
+}
