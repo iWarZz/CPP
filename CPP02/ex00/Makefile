@@ -6,7 +6,7 @@
 #    By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/21 11:10:20 by ssalor            #+#    #+#              #
-#    Updated: 2024/02/27 11:04:23 by ssalor           ###   ########.fr        #
+#    Updated: 2024/02/27 13:32:40 by ssalor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,9 @@ _END		=	\033[00m
 
 NAME	=	Fixed
 
-SOURCES	=	
+SOURCES	=	Fixed.cpp\
+			main.cpp\
+			
 
 CC		=	c++
 
