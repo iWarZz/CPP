@@ -6,14 +6,14 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 11:22:01 by ssalor            #+#    #+#             */
-/*   Updated: 2024/02/27 14:17:10 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/02/28 14:13:37 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Fixed.hpp"
 
-Fixed::Fixed(void) : value(0)
+Fixed::Fixed(void) : rawbits(0)
 {
     std::cout << "Default constructor called" << std::endl;
 }
@@ -39,10 +39,10 @@ Fixed::~Fixed(void)
 int Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
-	return (this->value);
+	return (this->rawbits);
 }
 
 void Fixed::setRawBits(int const raw)
 {
-    this->value = raw;
+    this->rawbits = raw;
 }

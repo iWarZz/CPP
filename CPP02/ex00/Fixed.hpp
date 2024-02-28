@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 11:21:58 by ssalor            #+#    #+#             */
-/*   Updated: 2024/02/27 14:14:44 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/02/28 14:13:49 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 class Fixed
 {
     private:
-		int value;
+		int rawbits;
 		static const int bits = 8;
     public:
 		Fixed(void);
