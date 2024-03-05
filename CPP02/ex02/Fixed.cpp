@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 10:36:17 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/05 14:34:03 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/03/05 15:03:27 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,4 +128,13 @@ Fixed Fixed::operator/(const Fixed &number)
 	return Fixed(this->toFloat() / number.toFloat());
 }
 
+Fixed &Fixed::operator++(void)
+{
+	this->rawbits += 1;
+	return (*this);
+}
 
+Fixed Fixed::operator++()
+{
+	
+}
