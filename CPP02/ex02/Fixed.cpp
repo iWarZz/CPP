@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 10:36:17 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/05 15:03:27 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/03/08 11:10:21 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,7 +134,52 @@ Fixed &Fixed::operator++(void)
 	return (*this);
 }
 
-Fixed Fixed::operator++()
+Fixed Fixed::operator++(int)
 {
-	
+	Fixed tmp(this->rawbits * toFloat());
+	this->rawbits += 1;
+	return (tmp);
 }
+
+Fixed &Fixed::operator--(void)
+{
+	this->rawbits -= 1;
+	return(*this);
+}
+
+Fixed Fixed::operator--(int)
+{
+	Fixed tmp(this->rawbits * toFloat());
+	this->rawbits -= 1;
+	return(tmp);
+}
+
+Fixed &Fixed::min(Fixed &a, Fixed &b)
+{
+	if (a.getRawBits() < b.getRawBits())
+		return (a);
+	return(b);
+}
+
+const Fixed &Fixed::min(const Fixed &a, const Fixed &b)
+{
+	if (a.getRawBits() < b.getRawBits())
+		return (a);
+	return(b);
+}
+
+Fixed &Fixed::max(Fixed &a, Fixed &b)
+{
+	if (a.getRawBits() > b.getRawBits())
+		return (a);
+	return (b);
+}
+
+const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
+{
+	if (a.getRawBits() > b.getRawBits())
+		return (a);
+	return (b);
+}
+
+
