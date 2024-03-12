@@ -6,12 +6,17 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 13:47:03 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/12 15:13:15 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/03/12 15:19:06 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "ClapTrap.hpp"
+
+ClapTrap::~ClapTrap(void)
+{
+	std::cout << "Destructor has been called" << std::endl;
+}
 
 void ClapTrap::attack(const std::string& target)
 {
