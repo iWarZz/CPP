@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 12:35:17 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/20 13:18:29 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/03/21 15:01:46 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void    ScavTrap::attack(const std::string& target)
 		return ;
 	}
 	std::cout << "ScavTrap " << this->name << " attacks "
-			  << target << " causing points of damage!"<< std::endl;
+			  << target << " causing points of damage!" << std::endl;
 	this->energy_points -= 1;
 }
 

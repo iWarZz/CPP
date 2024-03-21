@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 13:47:03 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/15 12:51:34 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/03/21 15:08:08 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 ClapTrap::ClapTrap(std::string name) : name(name), hit_points(10), energy_points(10), attack_damage(0)
 {
-	std::cout << "Default constructor" << name << "called." << std::endl;
+	std::cout << "Default constructor " << name << " called." << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)

@@ -6,7 +6,7 @@
 #    By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/15 11:29:35 by ssalor            #+#    #+#              #
-#    Updated: 2024/03/20 10:03:12 by ssalor           ###   ########.fr        #
+#    Updated: 2024/03/21 15:05:11 by ssalor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ NAME	=	Fixed
 SOURCES	=	ClapTrap.cpp\
 			main.cpp\
 			ScavTrap.cpp\
-			ScavTrap.hpp
+			FragTrap.cpp
 
 CC		=	c++
 
