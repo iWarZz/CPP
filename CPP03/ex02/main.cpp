@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:03:16 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/21 15:04:50 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/03/21 15:11:43 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,45 +14,44 @@
 #include <iostream>
 #include "FragTrap.hpp"
 
-using std::cout;
-using std::endl;
-
 int main(void)
 {
 	FragTrap John("John");
 	FragTrap Albert("Albert");
 
-	cout << endl;
+	std::cout << std::endl;
 
 	John.attack("Albert");
 	Albert.takeDamage(30);
 
-	cout << endl;
+	std::cout << std::endl;
 
 	John.attack("Albert");
 	Albert.takeDamage(30);
 
-	cout << endl;
+	std::cout << std::endl;
 
 	John.attack("Albert");
 	Albert.takeDamage(30);
 
-	cout << endl;
+	std::cout << std::endl;
 
 	John.attack("Albert");
 	Albert.takeDamage(30);
 
-	cout << endl;
+	std::cout << std::endl;
 
 	Albert.beRepaired(100);
 
-	cout << endl;
+	std::cout << std::endl;
 
 	Albert.highFivesGuys();
 
-	cout << endl;
+	std::cout << std::endl;
 
 	Albert.takeDamage(100);
+	
+	std::cout << std::endl;
 
-	return EXIT_SUCCESS;
+	return 0;
 }
