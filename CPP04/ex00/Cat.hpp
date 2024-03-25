@@ -6,7 +6,23 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 13:57:31 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/22 13:57:32 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/03/25 10:50:29 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CAT_HPP
+#define CAT_HPP
+
+#include <string>
+
+class Cat
+{
+    private:
+        
+    public:
+        
+};
+
+
+
+#endif

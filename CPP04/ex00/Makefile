@@ -6,7 +6,7 @@
 #    By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/22 13:52:10 by ssalor            #+#    #+#              #
-#    Updated: 2024/03/22 13:52:25 by ssalor           ###   ########.fr        #
+#    Updated: 2024/03/25 10:47:36 by ssalor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,9 @@ _END		=	\033[00m
 NAME	=	Fixed
 
 SOURCES	=	main.cpp\
+			Animal.cpp\
+			Dog.cpp\
+			Cat.cpp\
 			
 
 CC		=	c++

@@ -6,7 +6,23 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 13:57:37 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/22 13:57:37 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/03/25 10:50:35 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef DOG_HPP
+#define DOG_HPP
+
+#include <string>
+
+class Dog
+{
+    private:
+        
+    public:
+        
+};
+
+
+
+#endif
