@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/22 13:57:34 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/25 12:49:21 by ssalor           ###   ########.fr       */
+/*   Created: 2024/03/25 13:31:23 by ssalor            #+#    #+#             */
+/*   Updated: 2024/03/25 13:43:49 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-Dog::Dog(void)
+WrongCat::WrongCat(void)
 {
-    std::cout << "(Dog) Default constructor has been called" << std::endl;
+    std::cout << "(WrongCat) Default constructor has been called" << std::endl;
 }
 
-Dog::Dog(const Dog &original)
+WrongCat::WrongCat(const WrongCat &original)
 {
     *this = original;
-    std::cout << "(Dog) Copy constructor has been called" << std::endl;
+    std::cout << "(WrongCat) Copy constructor has been called" << std::endl;
 }
 
-Dog& Dog::operator=(const Dog &copy)
+WrongCat& WrongCat::operator=(const WrongCat &copy)
 {
     this->type = copy.type;
-    std::cout << "(Dog) Copy assignment operator called" << std::endl;
+    std::cout << "(WrongCat) Copy assignment operator called" << std::endl;
     return (*this);
 }
 
-Dog::~Dog(void)
+WrongCat::~WrongCat(void)
 {
-    std::cout << "(Dog) Default destructor has been called" << std::endl;
+    std::cout << "(WrongCat) Default destructor has been called" << std::endl;
 }
 
-void Dog::makeSound(void) const
+void WrongCat::makeSound(void) const
 {
     std::cout << "WAF!" << std::endl;
 }

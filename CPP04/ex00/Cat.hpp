@@ -6,21 +6,23 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 13:57:31 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/25 10:50:29 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/03/25 12:47:14 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
 #define CAT_HPP
 
-#include <string>
+#include "Animal.hpp"
 
-class Cat
-{
-    private:
-        
+class Cat : public Animal
+{  
     public:
-        
+        Cat(void);
+        Cat(const Cat &original);
+        Cat &operator=(const Cat &copy);
+        ~Cat(void);
+        void makeSound(void) const; 
 };
 
 
