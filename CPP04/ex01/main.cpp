@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:13:52 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/26 11:20:20 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/03/26 11:59:51 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int main()
     delete j;//should not create a leak
     delete i;
 
-    return 0
+    return 0;
 }
