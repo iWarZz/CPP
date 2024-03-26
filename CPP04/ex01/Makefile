@@ -6,7 +6,7 @@
 #    By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/22 13:52:10 by ssalor            #+#    #+#              #
-#    Updated: 2024/03/26 11:16:03 by ssalor           ###   ########.fr        #
+#    Updated: 2024/03/26 14:43:07 by ssalor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SOURCES	=	main.cpp\
 			Dog.cpp\
 			Cat.cpp\
 			WrongAnimal.cpp\
-			WrongCat.cpp
+			WrongCat.cpp\
+			Brain.cpp
 			
 
 CC		=	c++
