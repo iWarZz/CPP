@@ -6,7 +6,7 @@
 #    By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/22 13:52:10 by ssalor            #+#    #+#              #
-#    Updated: 2024/03/25 13:45:32 by ssalor           ###   ########.fr        #
+#    Updated: 2024/03/26 11:16:03 by ssalor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ _BOLD		=	\033[1m
 _END		=	\033[00m
 
 
-NAME	=	ex00
+NAME	=	ex01
 
 SOURCES	=	main.cpp\
 			Animal.cpp\
