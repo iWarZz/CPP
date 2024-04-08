@@ -6,23 +6,50 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:13:52 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/26 14:51:11 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/04/08 11:42:38 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Animal.hpp"
-#include "Cat.hpp"
 #include "Dog.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "Cat.hpp"
+#include <cstdlib>
+#include <iostream>
 
-int main()
+#define NBR_ANIMALS 4
+
+int main(void)
 {
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    delete j;//should not create a leak
-    delete i;
+	const Animal* Bisteca = new Dog();
+	std::cout << std::endl;
 
-    return 0;
+	const Animal* Junim = new Cat();
+	std::cout << std::endl;
+
+	std::cout << "------------------- ZOO -------------------" << std::endl;
+	const Animal* zoo[NBR_ANIMALS];
+
+	std::cout << "------------------- DOGS -------------------" << std::endl;
+	for (size_t i = 0; i < 2; i += 1) {
+		zoo[i] = new Dog();
+		std::cout << std::endl;
+	}
+
+	std::cout << "------------------- CATS -------------------" << std::endl;
+	for (size_t i = 2; i < 4; i += 1) {
+		zoo[i] = new Cat();
+		std::cout << std::endl;
+	}
+
+	std::cout << "---------------- DELETE ZOO ---------------" << std::endl;
+	for (size_t i = 0; i < NBR_ANIMALS; i += 1) {
+		delete zoo[i];
+	}
+	std::cout << "--------------- ZOO DELETED ---------------" << std::endl;
+	std::cout << std::endl;
+
+	delete Bisteca;
+	delete Junim;
+
+	return EXIT_SUCCESS; 
 }

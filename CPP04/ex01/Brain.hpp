@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 11:16:53 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/26 14:35:51 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/04/08 11:16:42 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define BRAIN_HPP
 
 #include <string>
+#include <iostream>
 
 class Brain
 {

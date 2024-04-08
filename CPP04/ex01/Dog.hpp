@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 13:57:37 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/25 12:50:01 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/04/08 11:19:15 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 
 class Dog : public Animal
 {  
+    private:
+        Brain* brain;
     public:
         Dog(void);
         Dog(const Dog &original);
@@ -24,7 +26,6 @@ class Dog : public Animal
         ~Dog(void);
         void makeSound(void) const; 
 };
-
 
 
 #endif
