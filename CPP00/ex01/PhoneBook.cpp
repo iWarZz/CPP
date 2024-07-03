@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:56:25 by ssalor            #+#    #+#             */
-/*   Updated: 2024/07/03 13:58:03 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/03 14:00:46 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,8 +159,5 @@ void	PhoneBook::search()
 		std::cin.clear();
 		std::cout << "invalid intput" << std::endl;
 	}
-	if (static_cast<size_t>(conv_index) > 7)
-		std::cout << "No contact find in this index" << std::endl << std::endl;
-	else
-		display_contact(this->contacts[conv_index]);
+	display_contact(this->contacts[conv_index]);
 }
