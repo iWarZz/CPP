@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:36:53 by ssalor            #+#    #+#             */
-/*   Updated: 2024/07/03 11:28:29 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/03 13:07:26 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ class PhoneBook{
 	public:
 		void		add_contact();
 		void		search();
-		std::string	getFormat(const std::string &field);
-		PhoneBook();
+		std::string	getFormat(const std::string& field);
 		void		display_contact(Contact contact);
+		PhoneBook();
 
 };
 

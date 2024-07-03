@@ -6,14 +6,19 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:56:25 by ssalor            #+#    #+#             */
-/*   Updated: 2024/07/03 11:22:56 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/03 13:58:03 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-void display_contact(Contact contact)
+void PhoneBook::display_contact(Contact contact)
 {
+	if (contact.getFirstName().empty())
+	{
+		std::cout << "No contact." << std::endl << std::endl;
+		return ;
+	}
 	std::cout << std::endl;
 	std::cout << "First name: " << contact.getFirstName() << std::endl;
 	std::cout << "Last name: " << contact.getLastName() << std::endl;
@@ -23,7 +28,7 @@ void display_contact(Contact contact)
 	std::cout << std::endl;
 }
 
-std::string	getFormat(const std::string &field)
+std::string	PhoneBook::getFormat(const std::string &field)
 {
 	if (field.length() > 10)
 		return (field.substr(0,9) + ".");
@@ -143,12 +148,12 @@ void	PhoneBook::search()
 
 	while (1)
 	{
-		std::cout << "Choose index contact (0 to 7)";
+		std::cout << "Choose index contact (0 to 7) : ";
 		std::getline(std::cin, index);
-		if (index.empty() || index.find_first_not_of("0123456789") == std::string::npos)
+		if (index.length() == 1 && isdigit(index[0]))
 		{
 			conv_index = atoi(index.c_str());
-			if(conv_index <= 7)
+			if(conv_index >= 0 && conv_index <= 7)
 				break;
 		}
 		std::cin.clear();
