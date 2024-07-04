@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 13:05:40 by ssalor            #+#    #+#             */
-/*   Updated: 2024/02/09 10:21:49 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/04 11:47:20 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <sstream>
 # include <string>
 # include <iomanip>
+# include "Weapon.hpp"
 
 class HumanA
 {
@@ -25,8 +26,9 @@ class HumanA
         std::string name;
         Weapon &weapon;
     public:
+        ~HumanA();
         HumanA(std::string name, Weapon &weapon);
         void    attack(void);
-}
+};
 
 #endif

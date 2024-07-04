@@ -6,7 +6,7 @@
 #    By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/02 13:02:53 by ssalor            #+#    #+#              #
-#    Updated: 2024/02/02 13:03:38 by ssalor           ###   ########.fr        #
+#    Updated: 2024/07/04 11:19:27 by ssalor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,12 @@ _BOLD		=	\033[1m
 _END		=	\033[00m
 
 
-NAME	=	
+NAME	=	unnecessary_violence
 
 SOURCES	=	main.cpp\
+			HumanA.cpp\
+			HumanB.cpp\
+			Weapon.cpp
 
 CC		=	c++
 
