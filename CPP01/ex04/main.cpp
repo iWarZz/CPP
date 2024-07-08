@@ -6,56 +6,54 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 13:05:33 by ssalor            #+#    #+#             */
-/*   Updated: 2024/07/04 14:39:58 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/08 12:55:35 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
 #include <iostream>
 #include <fstream>
-#include <cstdio>
-#include <cstdlib>
+#include <string>
 
-void    replace_in_file(std::string file_name, std::string s1, std::string s2)
-{
+void replace_in_file(const std::string& file_name, const std::string& s1, const std::string& s2) {
+    std::string content;
     std::string line;
-    std::string str1;
-    std::string str2;
-    size_t      pos;
+    size_t pos;
 
-    std::ifstream file1(file_name);
-    if(file1.is_open())
+    std::ifstream file1(file_name.c_str());
+    if (file1.is_open()) 
     {
-        std::ofstream file2(file_name + ".replace");
         while (getline(file1, line))
-        {
-            str1 += line;
-            if (file1.eof())
-                str1 += '\n';
-        }
-        pos = str1.find(s1);
-        while (pos < str1.length())
-        {
-            str1.erase(pos, s1.length());
-            str1.insert(pos, s2);
-            pos = str1.find(s1, pos + s2.length());
-        }
-        file2 << str1;
-        file2.close();
+            content += line + '\n';
         file1.close();
+
+        // Remplacer les occurrences de s1 par s2
+        pos = content.find(s1);
+        while (pos != std::string::npos) {
+            content.erase(pos, s1.length());
+            content.insert(pos, s2);
+            pos = content.find(s1, pos + s2.length());
+        }
+
+        // Écrire le contenu modifié dans le nouveau fichier
+        std::ofstream file2((file_name + ".replace").c_str());
+        if (file2.is_open()) {
+            file2 << content;
+            file2.close();
+        }
+        else 
+            std::cerr << "Error opening output file: " << file_name + ".replace" << std::endl;
     }
     else
-        std::cout << "no file with " << file_name << " name" << std::endl;
+        std::cerr << "Error opening input file: " << file_name << std::endl;
 }
 
-int main(int ac, char **av)
-{
-    if (ac != 4)
+int main(int argc, char** argv) {
+    if (argc != 4)
     {
-        std::cout << "Wrong number of arguments" << std::endl;
+        std::cerr << "Wrong number of arguments" << std::endl;
         return 1;
     }
     else
-        replace_in_file(av[1], av[2], av[3]);
+        replace_in_file(argv[1], argv[2], argv[3]);
     return 0;
 }

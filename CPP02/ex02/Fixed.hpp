@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 10:36:20 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/08 11:12:43 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/08 14:04:16 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ class Fixed
 		Fixed operator-(const Fixed &number);
 		Fixed operator*(const Fixed &number);
 		Fixed operator/(const Fixed &number);
-		Fixed &Fixed::max(Fixed &a, Fixed &b)operator++(void);
+		Fixed &operator++(void);
 		Fixed operator++(int);
 		Fixed &operator--(void);
 		Fixed operator--(int);
