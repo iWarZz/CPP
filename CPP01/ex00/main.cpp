@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 12:11:24 by ssalor            #+#    #+#             */
-/*   Updated: 2024/01/31 13:44:22 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/09 13:26:06 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(void)
 {
     std::string input;
     
-    while (1)
+    /*while (1)
     {
         std::cout << "Give a name to the ZOMBIE (stack)" << std::endl;
         std::getline(std::cin, input);
@@ -32,10 +32,10 @@ int main(void)
             continue;
 	    }
         break;
-    }
-    randomChump(input);
+    }*/
+    randomChump("Poney");
 
-    while (1)
+    /*while (1)
     {
         std::cout << "Give a name to the ZOMBIE (Heap)" << std::endl;
         std::getline(std::cin, input);
@@ -46,9 +46,10 @@ int main(void)
 		    continue;
 	    }
         break;
-    }
-
+    }*/
+    input = "Cheval";
     Zombie *new_Z = newZombie(input);
+    new_Z->annonce();
     delete new_Z;
     return (EXIT_SUCCESS);
 }

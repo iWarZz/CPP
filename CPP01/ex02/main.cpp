@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 10:16:05 by ssalor            #+#    #+#             */
-/*   Updated: 2024/07/04 10:54:01 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/09 13:31:23 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int main(void)
     std::cout << "Pointer STR value     = " << stringPTR << std::endl; //PTR
     std::cout << "Reference STR value   = " << &stringREF << std::endl; //REF
     std::cout << std::endl;
+    
     std::cout << "In STR = " << str << std::endl;
     std::cout << "In PTR = " << *stringPTR << std::endl;
     std::cout << "In REF = " << stringREF << std::endl;

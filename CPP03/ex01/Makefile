@@ -6,7 +6,7 @@
 #    By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/15 11:29:35 by ssalor            #+#    #+#              #
-#    Updated: 2024/03/20 13:34:14 by ssalor           ###   ########.fr        #
+#    Updated: 2024/07/08 14:07:24 by ssalor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ _BOLD		=	\033[1m
 _END		=	\033[00m
 
 
-NAME	=	Fixed
+NAME	=	ScavTrap
 
 SOURCES	=	ClapTrap.cpp\
 			main.cpp\

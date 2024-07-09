@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 13:57:27 by ssalor            #+#    #+#             */
-/*   Updated: 2024/04/08 11:33:34 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/09 11:22:35 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Cat::Cat(void) : Animal()
 Cat::Cat(const Cat &original)
 {
     *this = original;
-    this->brain = new Brain();
+    this->brain = new Brain(*(original.getBrain()));
     std::cout << "(Cat) Copy constructor has been called" << std::endl;
 }
 
@@ -50,4 +50,25 @@ Cat::~Cat(void)
 void Cat::makeSound(void) const
 {
     std::cout << "MIIAAAAAAAOUU" << std::endl;
+}
+
+void Cat::compareTo(Cat const & other_Cat) const
+{
+    std::cout << std::endl;
+    std::cout << "Now comparing two Cats\n";
+    std::cout << "My brain's heap address: " << (this->brain) << std::endl;
+    std::cout << "Other's heap address: " << (other_Cat.getBrain()) << std::endl;
+    std::cout << std::endl;
+    std::cout << "My brain's ideas \t\t | \t\t\t Other brain's ideas\n";
+    for (int i = 0; i < 100; i++)
+        std::cout << "-";
+    std::cout << std::endl;
+    for (int i = 0; i < 100; i++)
+        std::cout << ((this->brain)->getIdeas())[i] << "\t\t\t | \t\t\t" << ((other_Cat.getBrain())->getIdeas())[i] << std::endl;
+    std::cout << std::endl;
+}
+
+Brain *Cat::getBrain(void) const
+{
+    return (this->brain);
 }
