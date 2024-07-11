@@ -6,69 +6,71 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 13:57:34 by ssalor            #+#    #+#             */
-/*   Updated: 2024/07/09 11:22:10 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/11 10:41:05 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Dog.hpp"
 
-Dog::Dog(void) : Animal()
-{
-    std::cout << "(Dog) Default constructor has been called" << std::endl;
-    try
-    {
-        this->brain = new Brain();
-    }
-    catch (const std::bad_alloc& e)
-    {
-        std::cout << "Brain's Dog memory fail" << e.what() << std::endl;
-    }
+Dog::Dog(void)
+{	
+	this->type = "Dog";
+	this->brain = new Brain;
+	std::cout << "Dog default constructor has been called" << std::endl;
 }
 
-Dog::Dog(const Dog &original)
+Dog::Dog(Dog &copy)
 {
-    *this = original;
-    this->brain = new Brain(*(original.getBrain()));
-    std::cout << "(Dog) Copy constructor has been called" << std::endl;
+	std::cout << "Copy dog brain" << std::endl;
+	this->type = copy.getType();
+	this->brain = new Brain(*(copy.getBrain()));
+	std::cout << "Dog copy constructor has been called" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog &copy)
 {
-    if (this != &copy)
-        *this = copy;
-    std::cout << "(Dog) Copy assignment operator called" << std::endl;
-    return (*this);
+	this->type = copy.type;
+	if (this->brain)
+		delete (this->brain);
+	this->brain = new Brain(*(copy.getBrain()));
+	std::cout << "Dog copy assignment constructor has been called" << std::endl;
+	return *this;
 }
 
-Dog::~Dog(void)
+Dog::~Dog(void) 
 {
-    delete this->brain;
-    std::cout << "(Dog) Default destructor has been called" << std::endl;
+	delete this->brain;
+	std::cout << "Dog default destructor has been called" << std::endl;
 }
 
-void Dog::makeSound(void) const
+void Dog::makeSound(void) const 
 {
-    std::cout << "WAF!" << std::endl;
+	std::cout << "Woof woof" << std::endl;
+}
+
+std::string Dog::getType() const
+{
+	return (this->type);
+}
+
+Brain *Dog::getBrain( void ) const
+{
+	return (this->brain);
 }
 
 void Dog::compareTo(Dog const & other_Dog) const
 {
-    std::cout << std::endl;
-    std::cout << "Now comparing two Dogs\n";
-    std::cout << "My brain's heap address: " << (this->brain) << std::endl;
-    std::cout << "Other's heap address: " << (other_Dog.getBrain()) << std::endl;
-    std::cout << std::endl;
-    std::cout << "My brain's ideas \t\t | \t\t\t Other brain's ideas\n";
-    for (int i = 0; i < 100; i++)
-        std::cout << "-";
-    std::cout << std::endl;
-    for (int i = 0; i < 100; i++)
-        std::cout << ((this->brain)->getIdeas())[i] << "\t\t\t | \t\t\t" << ((other_Dog.getBrain())->getIdeas())[i] << std::endl;
-    std::cout << std::endl;
-}
-
-Brain *Dog::getBrain(void) const
-{
-    return (this->brain);
+	std::cout << std::endl;
+	std::cout << "Now comparing two Dogs\n";
+	std::cout << "My brain's heap address: " << static_cast<void*>(this->brain) << std::endl;
+	std::cout << "Other's heap address: " << static_cast<void*>(other_Dog.getBrain()) << std::endl;
+	std::cout << std::endl;
+	std::cout << "My brain's ideas \t\t | \t\t\t Other brain's ideas\n";
+	for (int i = 0; i < 100; i++)
+		std::cout << "-";
+	std::cout << std::endl;
+	for (int i = 0; i < 100; i++)
+		std::cout << ((this->brain)->getIdeas())[i] << "\t\t\t | \t\t\t" << ((other_Dog.getBrain())->getIdeas())[i] << std::endl;
+	std::cout << std::endl;
 }

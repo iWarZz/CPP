@@ -6,53 +6,37 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:13:52 by ssalor            #+#    #+#             */
-/*   Updated: 2024/07/09 10:37:49 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/11 10:26:59 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string>
 #include <iostream>
 #include <cstdlib>
-#include "Animal.hpp"
-#include "Dog.hpp"
 #include "Cat.hpp"
+#include "Dog.hpp"
+#include "Animal.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
 int	main(void)
 {
-	const Animal* dog = new Dog();
-	const Animal* cat = new Cat();
-	const Animal* meta_animal = new Animal();
+	const	Animal* meta = new Animal();
+	const	Animal* dog = new Dog();
+	const	Animal* cat = new Cat();
 
-	std::cout << dog->getType() << "-> "; 
+	const	WrongAnimal* atem = new WrongAnimal();
+	const	WrongAnimal* wrong_cat = new WrongCat();
+
+	std::cout << dog->getType() << " is here" << std::endl;
 	dog->makeSound();
-
-	std::cout << cat->getType() << "-> "; 
+	std::cout << cat->getType() << " is here" << std::endl;
 	cat->makeSound();
+	meta->makeSound();
 
-	std::cout << std::endl;
-
-	meta_animal->makeSound();
-
-	std::cout << std::endl;
-
-	std::cout << "---------- WrongAnimal & WrongCat ----------" << std::endl;
-
-	const WrongAnimal* wrong_cat = new WrongCat();
-	const WrongAnimal* meta_wrong_animal = new WrongAnimal();
-
-	std::cout << wrong_cat->getType() << "-> "; 
+	std::cout << wrong_cat->getType() << " is here" << std::endl;
 	wrong_cat->makeSound();
-
-	meta_wrong_animal->makeSound();
-
-	std::cout << std::endl;
-
-	delete dog;
-	delete cat;
-	delete meta_animal;
-	delete wrong_cat;
-	delete meta_wrong_animal;
+	atem->makeSound();
 
 	return EXIT_SUCCESS;
 }

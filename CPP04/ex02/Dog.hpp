@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 13:57:37 by ssalor            #+#    #+#             */
-/*   Updated: 2024/04/08 11:19:15 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/11 10:41:59 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,20 @@
 
 class Dog : public Animal
 {  
-    private:
-        Brain* brain;
+	private:
+		std::string type;
+		Brain* brain;
     public:
         Dog(void);
-        Dog(const Dog &original);
+        Dog(Dog &copy);
         Dog &operator=(const Dog &copy);
         ~Dog(void);
-        void makeSound(void) const; 
+        std::string getType() const;
+        Brain *getBrain( void ) const;
+        void compareTo(Dog const & other_Dog) const;
+        virtual void makeSound(void) const; 
 };
+
 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 13:29:40 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/26 11:59:38 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/11 10:26:08 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class WrongAnimal
         std::string type;
     public:
         WrongAnimal(void);
-        WrongAnimal(const WrongAnimal &original);
+        WrongAnimal(const WrongAnimal &copy);
         WrongAnimal& operator=(const WrongAnimal &copy);
         virtual ~WrongAnimal(void);
         std::string getType(void) const;

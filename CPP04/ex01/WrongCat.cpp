@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 13:31:23 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/25 13:43:49 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/11 10:24:59 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 
 WrongCat::WrongCat(void)
 {
+    this->type = "WrongCat";
     std::cout << "(WrongCat) Default constructor has been called" << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat &original)
+WrongCat::WrongCat(const WrongCat &copy)
 {
-    *this = original;
+    this->type = copy.getType();
     std::cout << "(WrongCat) Copy constructor has been called" << std::endl;
 }
 

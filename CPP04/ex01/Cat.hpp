@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 13:57:31 by ssalor            #+#    #+#             */
-/*   Updated: 2024/07/09 11:16:48 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/11 10:42:30 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,20 @@
 
 class Cat : public Animal
 {  
-    private:
-        Brain* brain;
+	private:
+		std::string type;
+    	Brain* brain;
     public:
         Cat(void);
-        Cat(const Cat &original);
+        Cat(Cat &copy);
         Cat &operator=(const Cat &copy);
         ~Cat(void);
-        void makeSound(void) const; 
+        std::string getType() const;
+        Brain *getBrain( void ) const;
         void compareTo(Cat const & other_Cat) const;
-        Brain *getBrain(void) const;
+        virtual void makeSound(void) const; 
 };
+
 
 
 #endif

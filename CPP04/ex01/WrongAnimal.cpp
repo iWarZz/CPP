@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 13:30:24 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/25 13:43:10 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/11 10:25:07 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 
 WrongAnimal::WrongAnimal(void)
 {
+    this->type = "WrongAnimal";
     std::cout << "(WrongAnimal) WrongAnimal constructor has been called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &original)
+WrongAnimal::WrongAnimal(const WrongAnimal &copy)
 {
-    *this = original;
+    this->type = copy.type;
     std::cout << "(WrongAnimal) Copy constructor has been called" << std::endl;
 }
 
@@ -39,11 +40,6 @@ WrongAnimal::~WrongAnimal(void)
 std::string WrongAnimal::getType(void)const
 {
     return (this->type);
-}
-
-void WrongAnimal::setType(std::string type)
-{
-    this->type = type;
 }
 
 void WrongAnimal::makeSound(void) const

@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 13:57:34 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/25 12:49:21 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/11 10:26:25 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 
 Dog::Dog(void)
 {
+	this->type = "Dog";
     std::cout << "(Dog) Default constructor has been called" << std::endl;
 }
 
-Dog::Dog(const Dog &original)
+Dog::Dog(const Dog &copy)
 {
-    *this = original;
+    this->type = copy.getType();
     std::cout << "(Dog) Copy constructor has been called" << std::endl;
 }
 
@@ -34,6 +35,11 @@ Dog& Dog::operator=(const Dog &copy)
 Dog::~Dog(void)
 {
     std::cout << "(Dog) Default destructor has been called" << std::endl;
+}
+
+std::string Dog::getType() const
+{
+	return (this->type);
 }
 
 void Dog::makeSound(void) const

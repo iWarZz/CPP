@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 11:16:53 by ssalor            #+#    #+#             */
-/*   Updated: 2024/07/09 11:17:59 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/11 10:44:07 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 class Brain
 {
     private:
-        std::string ideas;
+        std::string *ideas;
     public:
         Brain(void);
-        Brain(const Brain &original);
+        Brain( Brain &copy);
         Brain &operator=(const Brain &copy);
         ~Brain(void);
-        std::string getIdeas();
+        std::string *getIdeas();
 };
 
 #endif
