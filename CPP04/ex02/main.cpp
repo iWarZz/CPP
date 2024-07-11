@@ -6,17 +6,33 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:13:52 by ssalor            #+#    #+#             */
-/*   Updated: 2024/07/09 11:20:32 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/11 11:10:31 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include <cstdlib>
 #include <iostream>
+#include <cstdlib>
+#include "Cat.hpp"
+#include "Dog.hpp"
+#include "Animal.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
-#define NBR_ANIMALS 4
+/*int    main(void)
+{
+    const    Animal*    dog = new Dog();
+    const    Animal*    cat = new Cat();
+
+    Dog basic;
+    {
+    Dog tmp = basic;
+    }
+
+    delete dog;
+    delete cat;
+
+    return 0;
+}*/
 
 int main( void )
 {
@@ -28,7 +44,7 @@ int main( void )
 
     delete dog;
     delete cat;
-    std::system("leaks ex01");
+    std::system("leaks ex02");
     std::cout << std::endl;
     std::cout << std::endl;
 
@@ -69,5 +85,7 @@ int main( void )
         delete animal_array[i];
     std::cout << std::endl;
 
-    std::system("leaks ex01");
-}
+    // This will fail because Animal is abstract!
+    //const Animal a = new Animal();
+    std::system("leaks ex02");
+    }
