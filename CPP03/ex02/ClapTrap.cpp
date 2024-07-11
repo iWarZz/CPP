@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 13:47:03 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/21 15:08:08 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/11 13:29:11 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void ClapTrap::attack(const std::string& target)
 		std::cout << "ClapTrap is out of energy" << std::endl;
 		return ;
 	}
-	std::cout << "ClapTrap " << this->name << " attacks "
+	std::cout << this->name << " attacks "
 			  << target << " causing points of damage!"<< std::endl;
 	this->energy_points -= 1;
 }
@@ -61,11 +61,11 @@ void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (amount >= this->hit_points || this->hit_points == 0)
 	{
-		std::cout << "ClapTrap " << this->name << " died" << std::endl;
+		std::cout << this->name << " died" << std::endl;
 		return ;
 	}
 	this->hit_points -= amount;
-	std::cout << "ClapTrap " << this->name << " took "
+	std::cout << this->name << " took "
 			  << amount << " points of damage" << std::endl;
 }
 
@@ -73,12 +73,12 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->energy_points == 0)
 	{
-		std::cout << "ClapTrap is out of energy points!" << std::endl;
+		std::cout << " is out of energy points!" << std::endl;
 		return ;
 	}
 	this->hit_points += amount;
 	this->energy_points -= 1;
-	std::cout << "ClapTrap " << this->name 
+	std::cout << this->name 
 			  << " has been repaired and gained " << amount
 			  << " hit points" << std::endl;
 }

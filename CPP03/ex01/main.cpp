@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 11:00:25 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/20 13:13:56 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/11 13:19:03 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,11 @@ int main(void)
 	std::cout << std::endl;
 
 	PONEY.attack("cheval");
-	cheval.takeDamage(10);
+	cheval.takeDamage(100);
 
 	std::cout << std::endl;
 
 	PONEY.guardGate();
-	cheval.guardGate();
 
 	std::cout << std::endl;
 

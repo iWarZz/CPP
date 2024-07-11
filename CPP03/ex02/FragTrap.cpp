@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 13:48:20 by ssalor            #+#    #+#             */
-/*   Updated: 2024/03/21 15:07:41 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/07/11 13:29:54 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ void FragTrap::highFivesGuys(void)
 {
     if (this->energy_points == 0)
 	{
-		std::cout << "FragTrap" << this->name << " is out of energy" << std::endl;
+		std::cout << this->name << " is out of energy" << std::endl;
 		return ;
 	}
-	std::cout << "FragTrap " << this->name << " do High fives !" << std::endl;
+	std::cout << this->name << " do High fives !" << std::endl;
 	this->energy_points -= 1;
 }
