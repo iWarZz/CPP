@@ -6,7 +6,7 @@
 #    By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/10 12:17:08 by ssalor            #+#    #+#              #
-#    Updated: 2024/07/10 12:17:52 by ssalor           ###   ########.fr        #
+#    Updated: 2024/08/22 07:44:13 by ssalor           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ _END		=	\033[00m
 
 NAME	=	bureaucrat
 
-SOURCES	=	main.cpp
+SOURCES	=	main.cpp Bureaucrat.cpp
 
 CC		=	c++
 

@@ -6,7 +6,7 @@
 /*   By: ssalor <ssalor@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 12:18:33 by ssalor            #+#    #+#             */
-/*   Updated: 2024/08/22 07:03:09 by ssalor           ###   ########.fr       */
+/*   Updated: 2024/08/22 07:33:17 by ssalor           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,22 @@ class Bureaucrat
 		void 				incrementGrade(void);
 		void 				decrementGrade(void);
 	
-	class GradeTooHighException; public std::exeption
+	class GradeTooHighException: public std::exception
 	{
 		public:
 			virtual const char* what() const throw();
 	};
 	
 	
-	class GradeTooLowException; public std::exeption
+	class GradeTooLowException: public std::exception
 	{
 		public:
 			virtual const char* what() const throw();
 	};
+
+	Bureaucrat	&operator=(const Bureaucrat &bureaucrat);
 };
+
+std::ostream	&operator<<(std::ostream &out, const Bureaucrat &bureaucrat);
 
 #endif
